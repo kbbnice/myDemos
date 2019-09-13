@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function showMaxLen() {
+            let str = 'abcaddadfsfwerb'
+            let arr = str.split('')
+            let maxLen = 0
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    // 如果遇到相等的： 
+                    if (arr[i] == arr[j]) {
+                        let len = j - i
+                        console.log(len)
+                        console.log(arr[i], 'he', arr[j]);
+                        
+                        if (maxLen < len) {
+                            maxLen = len
+                        }
+                        break
+                    }
+                }
+            }
+            console.log(maxLen)
+        }
+        showMaxLen()
+
+    </script>
+</body>
+
+</html>
